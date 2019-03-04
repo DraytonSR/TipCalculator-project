@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     Button reset;
     EditText bill;
     EditText people;
+    EditText customTip;
     TextView finalTotal;
     TextView finalTotalPerPeep;
     double tip = 0.0;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         reset = findViewById(R.id.resetButton);
         bill = findViewById(R.id.billAmount);
         people = findViewById(R.id.numPeeps);
+        customTip = findViewById(R.id.customTip);
         finalTotal = findViewById(R.id.finalTotal);
         finalTotalPerPeep = findViewById(R.id.finalTotalPerPeep);
 
@@ -57,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
                     tip = .1;
                 }
                 else if(customPercent.isChecked()) {
-                    int customTip = Integer.parseInt(customPercent.getText().toString());
-                    tip = customTip / 100.0;
+                    double custom = Double.parseDouble(customTip.getText().toString());
+                    tip = custom / 100.0;
                 }
 
 
