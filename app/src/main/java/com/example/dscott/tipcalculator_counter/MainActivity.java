@@ -1,5 +1,6 @@
 package com.example.dscott.tipcalculator_counter;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -67,8 +68,9 @@ public class MainActivity extends AppCompatActivity {
                 total = (subTotal * tip) + subTotal;
                 totalPerPeep = total/numPeeps;
 
-                finalTotal.setText("$" + total);
-                finalTotalPerPeep.setText("$" + totalPerPeep);
+
+                    finalTotal.setText("$" + total);
+                    finalTotalPerPeep.setText("$" + totalPerPeep);
 
 
             }

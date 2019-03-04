@@ -121,15 +121,12 @@
 
     <Button
         android:id="@+id/resetButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="115dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="228dp"
         android:text="@string/resetButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/calcButton"
-        app:layout_constraintTop_toTopOf="@+id/calcButton" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/billAmount"
