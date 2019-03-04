@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">TipCalculator-counter</string>
+    <string name="twentyPercent">20% Tip</string>
+    <string name="fifteenPercent">15% Tip</string>
+    <string name="tenPercent">10% Tip</string>
+    <string name="customPercent">Custom Tip</string>
+    <string name="calcButton">Calculate TIp</string>
+    <string name="resetButton">Reset</string>
+    <string name="billAmount">Bill Subtotal: </string>
+    <string name="numPeeps"># People Splitting Bill: </string>
+    <string name="finalTotalText">Final Total: </string>
+    <string name="finalTotal">$0.00</string>
+    <string name="finalTotalPerPeepText">Final Total Per Person: </string>
+    <string name="finalTotalPerPeep">$0.00</string>
 </resources>

@@ -7,12 +7,159 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/finalTotal2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/finalTotal"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/finalTotal" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="6dp"
+        android:text="@string/finalTotalText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/finalTotal2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/numPeepsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="159dp"
+        android:text="@string/numPeeps"
+        app:layout_constraintEnd_toStartOf="@+id/numPeeps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billTextView" />
+
+    <EditText
+        android:id="@+id/numPeeps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="174dp"
+        android:layout_marginEnd="2dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numPeepsTextView"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="365dp"
+        android:layout_height="196dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="289dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/tenPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tenPercent"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="365dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="289dp" />
+
+        <RadioButton
+            android:id="@+id/fifteenPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fifteenPercent"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="365dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="338dp" />
+
+        <RadioButton
+            android:id="@+id/twentyPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twentyPercent"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="365dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="387dp" />
+
+        <RadioButton
+            android:id="@+id/customPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customPercent"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="365dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="436dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:text="@string/calcButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/resetButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/billAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/numPeeps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/billTextView" />
+
+    <TextView
+        android:id="@+id/billTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="207dp"
+        android:text="@string/billAmount"
+        app:layout_constraintEnd_toStartOf="@+id/billAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="@string/finalTotalText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/finalTotal"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/finalTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="43dp"
+        android:text="@string/finalTotal"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/calcButton" />
 
 </android.support.constraint.ConstraintLayout>
