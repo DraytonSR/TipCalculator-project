@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     EditText bill;
     EditText people;
     TextView finalTotal;
-    double tip;
+    TextView finalTotalPerPeep;
+    double tip = 0.0;
     double total;
     double totalPerPeep;
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         bill = findViewById(R.id.billAmount);
         people = findViewById(R.id.numPeeps);
         finalTotal = findViewById(R.id.finalTotal);
+        finalTotalPerPeep = findViewById(R.id.finalTotalPerPeep);
 
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,26 +50,38 @@ public class MainActivity extends AppCompatActivity {
                 if (twentyPercent.isChecked()) {
                     tip = .2;
                 }
-                if (fifteenPercent.isChecked()) {
+                else if(fifteenPercent.isChecked()) {
                     tip = .15;
                 }
-                if (tenPercent.isChecked()) {
+                else if(tenPercent.isChecked()) {
                     tip = .1;
                 }
-                if (customPercent.isChecked()) {
+                else if(customPercent.isChecked()) {
                     int customTip = Integer.parseInt(customPercent.getText().toString());
                     tip = customTip / 100.0;
                 }
-                else{
-                    tip = 0.0;
-                }
+
 
                 total = (subTotal * tip) + subTotal;
                 totalPerPeep = total/numPeeps;
 
-                finalTotal.setText("$"+ total);
+                finalTotal.setText("$" + total);
+                finalTotalPerPeep.setText("$" + totalPerPeep);
 
 
+            }
+        });
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                tenPercent.setChecked(false);
+                fifteenPercent.setChecked(false);
+                twentyPercent.setChecked(false);
+                customPercent.setChecked(false);
+
+                bill.getText().clear();
+                people.getText().clear();
 
             }
         });
